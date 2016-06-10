@@ -475,6 +475,19 @@ module Trackvia
       end
     end
 
+    # Deletes all records in the authorized view.
+    #
+    def delete_records(view_id)
+      begin
+        url = "#{base_uri}/openapi/views/#{view_id}/records/all"
+
+        RestClient.delete url, { :params => auth_params, :accept => :json }
+
+      rescue RestClient::Exception => e
+        retry if maybe_retry_when_bad_auth_token(e)
+      end
+    end
+
     # Adds a file to an accessible record in the authorized view.
     #
     # The 'file_path' parameter is an regular file-system path, according to your operating system.
