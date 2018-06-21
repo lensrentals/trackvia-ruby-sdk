@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rest-client', '~> 1.7'
   s.add_dependency 'logger', '~> 1.2'
-  s.add_dependency 'json', '~> 1.8'
+  s.add_dependency 'json', '>= 1.8.1'
 
   s.add_development_dependency 'rake', '~> 10.0'
   s.add_development_dependency 'minitest', '~> 5.4'
