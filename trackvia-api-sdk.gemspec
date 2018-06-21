@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files      = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths   = ["lib"]
 
-  s.add_dependency 'rest-client', '~> 1.7'
+  s.add_dependency 'rest-client', '>= 1.7.2'
   s.add_dependency 'logger', '~> 1.2'
   s.add_dependency 'json', '>= 1.8.1'
 
